@@ -8,39 +8,113 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/resources/css/order.css">
+ <link rel="stylesheet" href="/resources/css/make.css"> 
 <script src="https://code.jquery.com/jquery-3.4.1.js"
 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 	crossorigin="anonymous"></script>
 
 <!-- 다음주소 -->
-<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+<script
+	src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript"
+	src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+<style type="text/css">
 
+/* 비디오 배경 */
+#videobcg {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   min-width: 1920px;
+   min-height: 1080px;
+   width: 100%;
+   height: 100%;
+   z-index: -1000;
+   overflow: hidden;
+}
+
+</style>
 </head>
 <body>
-<%@include file="header.jsp" %>
+
+  <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
+      muted="muted">
+
+      <source src="../../resources/css/adobeVideo/sunRisingSmall.mp4"
+         type="video/mp4">
+
+   </video> 
+
+<div class="header">
+	<h1 class="Logo">
+		<a href="/"> SPACE SHIP</a>
+	</h1>
+	<a href="/moveMakeWeb2" class="a1">역사</a>
+	<a href="/search" class="a1">우주선검색</a> 
+	<a href="/moveMakeWeb4" class="a1">ufo</a> 
+	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
+				
+		<c:if test="${isAdmin == 1}">
+			<a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
+				class="frame-btn__outline frame-btn__outline--tall"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">admin</span>
+			</a>
+
+		</c:if>
+				
+			<c:if test="${not empty member.user_id}">
+				<a class="frame-btn" href="/logout" id="logoutBtn"> 
+				<span class="frame-btn__outline frame-btn__outline--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__outline frame-btn__outline--flat"></span>
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__solid"></span> <span class="frame-btn__text">로그아웃</span>
+				</a>	
+				
+				
+		
+  			                          
+								<a class="frame-btn" href="/orderList">
+				<span class="frame-btn__outline frame-btn__outline--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__outline frame-btn__outline--flat"></span>
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__solid"></span> <span class="frame-btn__text">주문현황</span>
+				</a>	
+			</c:if>
+				
+			<c:if test="${empty member.user_id}">
+				<a class="frame-btn" href="moveLogin"> 
+					<span class="frame-btn__outline frame-btn__outline--tall"></span>
+					<span class="frame-btn__line frame-btn__line--tall"></span> 
+					<span class="frame-btn__line frame-btn__line--flat"></span>
+					<span class="frame-btn__outline frame-btn__outline--flat"></span>
+					<span class="frame-btn__line frame-btn__line--tall"></span> 
+					<span class="frame-btn__line frame-btn__line--flat"></span>
+					<span class="frame-btn__solid"></span> 
+					<span class="frame-btn__text">LOGIN</span>
+				</a>
+			</c:if>
+		</div>
 
 	<div class="wrapper">
 		<div class="wrap">
-			<div class="search_area">
-				<div class="search_wrap">
-					<form id="searchForm" action="/search" method="get">
-						<div class="search_input">
-							<select name="type">
-								<option value="T">품명</option>
 
-							</select> <input type="text" name="keyword"
-								value="<c:out value="${pageMaker.cri.keyword}"/>">
-							<button class='btn search_btn'>검 색</button>
-						</div>
-					</form>
-				</div>
-			</div>
 			<div class="content_area">
 
-				<div class="content_subject">
-					<span>장바구니</span>
+				<div class="neon_effect">
+					<span class="content_subject">장바구니</span>
 				</div>
 
 				<div class="content_main">
@@ -59,7 +133,7 @@
 					<div class="addressInfo_div">
 						<div class="addressInfo_button_div">
 							<button class="address_btn address_btn_1"
-								onclick="showAdress('1')" style="background-color: #3c3838;">사용자
+								onclick="showAdress('1')">사용자
 								정보 주소록</button>
 							<button class="address_btn address_btn_2"
 								onclick="showAdress('2')">직접 입력</button>
@@ -79,11 +153,12 @@
 										</tr>
 										<tr>
 											<th>주소</th>
-											<td>${memberInfo.user_address}
-											<input class="selectAddress" value="T" type="hidden">
-											<input class="addressee_input" value="${memberInfo.user_nick}" type="hidden">
-											<input class="address1_input" type="hidden" value="${memberInfo.user_address}">
-	
+											<td>${memberInfo.user_address}<input
+												class="selectAddress" value="T" type="hidden"> <input
+												class="addressee_input" value="${memberInfo.user_nick} "
+												type="hidden"> <input class="address1_input"
+												type="hidden" value="${memberInfo.user_address}">
+
 
 											</td>
 										</tr>
@@ -104,12 +179,10 @@
 										</tr>
 										<tr>
 											<th>주소</th>
-											<td>
-
-											<input class="selectAddress" value="F" type="hidden">
-											<input class="address1_input" placeholder="우편번호, 상세주소">
-											<a class="address_search_btn" onclick="execution_daum_address()">주소 찾기</a>
-											</td>
+											<td><input class="selectAddress" value="F" type="hidden">
+												<input class="address1_input" placeholder="우편번호, 상세주소">
+												<a class="address_search_btn"
+												onclick="execution_daum_address()">주소 찾기</a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -159,11 +232,15 @@
 										</td>
 										<td><span id="shipNameTd">${ol.shipName}</span></td>
 										<td class="goods_table_price_td">수량 ${ol.shipCount}개 <br>
-										<fmt:formatNumber value="${ol.shipPrice*ol.shipCount}" pattern="#,### 원" />
-											<input type="hidden" class="individual_shipPrice_input"value="${ol.shipPrice}"> 
-											<input type="hidden"class="individual_shipCount_input" value="${ol.shipCount}">
-											<input type="hidden" class="individual_shipPrice_shipCount_input" value="${ol.shipPrice * ol.shipCount}">
-											<input type="hidden" class="individual_shipId_input"value="${ol.shipId}">
+											<fmt:formatNumber value="${ol.shipPrice*ol.shipCount}"
+												pattern="#,### 원" /> <input type="hidden"
+											class="individual_shipPrice_input" value="${ol.shipPrice}">
+											<input type="hidden" class="individual_shipCount_input"
+											value="${ol.shipCount}"> <input type="hidden"
+											class="individual_shipPrice_shipCount_input"
+											value="${ol.shipPrice * ol.shipCount}"> <input
+											type="hidden" class="individual_shipId_input"
+											value="${ol.shipId}">
 										</td>
 									</tr>
 								</c:forEach>
@@ -175,7 +252,7 @@
 					<div class="total_info_div">
 						<!-- 가격 종합 정보 -->
 						<div class="total_info_price_div">
-							<ul>
+							<ul class="allJungbo">
 								<li><span class="price_span_label">상품 금액</span> <span
 									class="totalPrice_span"></span>원</li>
 								<li><span class="price_span_label">배송비</span> <span
@@ -190,7 +267,7 @@
 						</div>
 						<!-- 버튼 영역 -->
 						<div class="total_info_btn_div">
-							<button class="order_btn">결제하기</button> 
+							<button class="order_btn">결제하기</button>
 						</div>
 
 
@@ -198,17 +275,17 @@
 
 
 				</div>
-		<!-- 주문 요청 form -->
-		<form class="order_form" action="/order" method="post">
-			<!-- 주문자 회원번호 -->
-			<input name="memberId" value="${memberInfo.user_id}" type="hidden">
-			<!-- 주소록 & 받는이-->
-			<input name="addressee" type="hidden">
-			<input name="memberAddr1" type="hidden">
-			<!-- 사용 포인트 -->
-			<input name="usePoint" type="hidden">
-			<!-- 상품 정보 -->
-		</form>
+				<!-- 주문 요청 form -->
+				<form class="order_form" action="/order" method="post">
+					<!-- 주문자 회원번호 -->
+					<input name="memberId" value="${memberInfo.user_id}" type="hidden">
+					<!-- 주소록 & 받는이-->
+					<input name="addressee" type="hidden"> <input
+						name="memberAddr1" type="hidden">
+					<!-- 사용 포인트 -->
+					<input name="usePoint" type="hidden">
+					<!-- 상품 정보 -->
+				</form>
 
 			</div>
 		</div>
@@ -217,31 +294,49 @@
 	<script>
 		/* 주소입력란 버튼 동작(숨김, 등장) */
 
-		$(document).ready(function() {
+		$(document)
+				.ready(
+						function() {
 
-			/* 주문 조합정보란 최신화 */
-			setTotalInfo();
-			
-			/* 이미지 삽입 */
-			$(".image_wrap").each(function(i, obj){
-				
-				const bobj = $(obj);
-				
-				if(bobj.data("shipid")){
-					const uploadPath = bobj.data("path");
-					const uuid = bobj.data("uuid");
-					const fileName = bobj.data("filename");
-					
-					const fileCallPath = encodeURIComponent(uploadPath + "/s_" + uuid + "_" + fileName);
-					
-					$(this).find("img").attr('src', '/display?fileName=' + fileCallPath);
-				} else {
-					$(this).find("img").attr('src', '/resources/image/goodsNoImage.png');
-				}
-				
-			});
+							/* 주문 조합정보란 최신화 */
+							setTotalInfo();
 
-		});
+							/* 이미지 삽입 */
+							$(".image_wrap")
+									.each(
+											function(i, obj) {
+
+												const bobj = $(obj);
+
+												if (bobj.data("shipid")) {
+													const uploadPath = bobj
+															.data("path");
+													const uuid = bobj
+															.data("uuid");
+													const fileName = bobj
+															.data("filename");
+
+													const fileCallPath = encodeURIComponent(uploadPath
+															+ "/s_"
+															+ uuid
+															+ "_" + fileName);
+
+													$(this)
+															.find("img")
+															.attr(
+																	'src',
+																	'/display?fileName='
+																			+ fileCallPath);
+												} else {
+													$(this)
+															.find("img")
+															.attr('src',
+																	'/resources/image/goodsNoImage.png');
+												}
+
+											});
+
+						});
 
 		function showAdress(className) {
 			/* 컨텐츠 동작 */
@@ -252,17 +347,18 @@
 
 			/* 버튼 색상 변경 */
 			/* 모든 색상 동일 */
-			$(".address_btn").css('backgroundColor', '#555');
+			$(".address_btn").css('backgroundColor', 'transparent');
 			/* 지정 색상 변경 */
-			$(".address_btn_" + className).css('backgroundColor', '#3c3838');
-			
+			$(".address_btn_" + className).css('backgroundColor', 'transparent');
+
 			/* selectAddress T/F */
 			/* 모든 selectAddress F만들기 */
-				$(".addressInfo_input_div").each(function(i, obj){
-					$(obj).find(".selectAddress").val("F");
-				});
+			$(".addressInfo_input_div").each(function(i, obj) {
+				$(obj).find(".selectAddress").val("F");
+			});
 			/* 선택한 selectAdress T만들기 */
-				$(".addressInfo_input_div"+ className).find(".selectAddress").val("T");
+			$(".addressInfo_input_div" + className).find(".selectAddress").val(
+					"T");
 		}
 
 		/* 다음 주소 연동 */
@@ -330,20 +426,22 @@
 			let deliveryPrice = 0; // 배송비
 			let finalTotalPrice = 0; // 최종 가격(총 가격 + 배송비)	
 
-			$(".goods_table_price_td").each(
-					function(index, element) {
-						// 총 가격
-						totalPrice += parseInt($(element).find(
-								".individual_shipPrice_shipCount_input").val());
-						// 총 갯수
-						totalCount += parseInt($(element).find(
-								".individual_shipCount_input").val());
-						// 총 종류
-						
-						totalKind += 1;
-						
-						
-					});
+			$(".goods_table_price_td")
+					.each(
+							function(index, element) {
+								// 총 가격
+								totalPrice += parseInt($(element)
+										.find(
+												".individual_shipPrice_shipCount_input")
+										.val());
+								// 총 갯수
+								totalCount += parseInt($(element).find(
+										".individual_shipCount_input").val());
+								// 총 종류
+
+								totalKind += 1;
+
+							});
 
 			/* 배송비 결정 */
 			if (totalPrice >= 30000) {
@@ -367,51 +465,69 @@
 			$(".delivery_price_span").text(deliveryPrice.toLocaleString());
 			// 최종 가격(총 가격 + 배송비)
 			$(".finalTotalPrice_span").text(finalTotalPrice.toLocaleString());
-			
+
 			$(".total_amount").val(finalTotalPrice);
 			$(".tax_free_amount").val("300");
 			$(".partner_order_id").val("0001");
 			$(".partner_user_id").val("admin");
 			$(".item_name").val("장남감 ");
 			$(".quantity").val(finalTotalPrice);
-			
+
 		}
-		
 
-			
-	
-	
 		/* 주문 요청 */
-		$(".order_btn").on("click", function(){
-	
-			/* 주소 정보 & 받는이*/
-			$(".addressInfo_input_div").each(function(i, obj){
-				if($(obj).find(".selectAddress").val() === 'T'){
-					$("input[name='addressee']").val($(obj).find(".addressee_input").val());
-					$("input[name='memberAddr1']").val($(obj).find(".address1_input").val());
-				}
-			});	
-	
+		$(".order_btn")
+				.on(
+						"click",
+						function() {
 
-			
-			/* 상품정보 */
-			let form_contents = ''; 
-			$(".goods_table_price_td").each(function(index, element){
-				let shipId = $(element).find(".individual_shipId_input").val();
-				let shipCount = $(element).find(".individual_shipCount_input").val();
-				let shipId_input = "<input name='orders[" + index + "].shipId' type='hidden' value='" + shipId + "'>";
-				form_contents += shipId_input;
-				let shipCount_input = "<input name='orders[" + index + "].shipCount' type='hidden' value='" + shipCount + "'>";
-				form_contents += shipCount_input;
-			});	
-			
+							/* 주소 정보 & 받는이*/
+							$(".addressInfo_input_div")
+									.each(
+											function(i, obj) {
+												if ($(obj).find(
+														".selectAddress").val() === 'T') {
+													$("input[name='addressee']")
+															.val(
+																	$(obj)
+																			.find(
+																					".addressee_input")
+																			.val());
+													$(
+															"input[name='memberAddr1']")
+															.val(
+																	$(obj)
+																			.find(
+																					".address1_input")
+																			.val());
+												}
+											});
 
-			$(".order_form").append(form_contents);	
-			
-			/* 서버 전송 */
-			$(".order_form").submit();	
-				
-		});
+							/* 상품정보 */
+							let form_contents = '';
+							$(".goods_table_price_td")
+									.each(
+											function(index, element) {
+												let shipId = $(element)
+														.find(
+																".individual_shipId_input")
+														.val();
+												let shipCount = $(element)
+														.find(
+																".individual_shipCount_input")
+														.val();
+												let shipId_input = "<input name='orders[" + index + "].shipId' type='hidden' value='" + shipId + "'>";
+												form_contents += shipId_input;
+												let shipCount_input = "<input name='orders[" + index + "].shipCount' type='hidden' value='" + shipCount + "'>";
+												form_contents += shipCount_input;
+											});
+
+							$(".order_form").append(form_contents);
+
+							/* 서버 전송 */
+							$(".order_form").submit();
+
+						});
 	</script>
 </body>
 </html>

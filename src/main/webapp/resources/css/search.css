@@ -31,15 +31,15 @@ detail
 
 /* 상품명 */
 
-.title:first-child{
-	
-  color: #fff;
- font-family: 'Song Myung', serif;
-  font-weight: bold;
-  font-size:2em;
-  animation: neon8 1.5s ease-in-out infinite alternate;
-  margin-left:240px;
-	margin-bottom: 5px;
+.title:first-child{  
+        display: flex;
+    color: #fff;
+    font-family: 'Song Myung', serif;
+    font-weight: bold;
+    font-size: 24px;
+    animation: neon8 1.5s ease-in-out infinite alternate;
+    margin-top: 4px;
+    margin-left: 244px;
 }
 
 /* 평점네온 */
@@ -50,9 +50,9 @@ detail
 }
 /* 가격표 */
 .priceText:first-child{
-	margin-left:-180px;
-  color: #fff;
-  animation: neon6 1.5s ease-in-out infinite alternate;
+	    margin-left: -686px;
+    color: #fff;
+    animation: neon6 1.5s ease-in-out infinite alternate;
 }
 
 /*  검색창*/

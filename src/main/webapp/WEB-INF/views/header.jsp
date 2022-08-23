@@ -12,7 +12,7 @@
 		<a href="/adminMenu"> SPACE SHIP</a>
 	</h1>
 	<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/moveMakeWeb3" class="a1">사업분야</a> 
+	<a href="/search" class="a1">우주선검색</a> 
 	<a href="/moveMakeWeb4" class="a1">ufo</a> 
 	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
 				
@@ -68,7 +68,7 @@
 			</c:if>
 		</div>
 
-	
+	<!-- 
 		<div class="search_area">
 			<div class="search_wrap">
 				<form id="searchForm" action="/search" method="get">
@@ -78,6 +78,6 @@
 					</div>
 				</form>
 			</div>
-		</div>
+		</div> -->
 		
 </div>

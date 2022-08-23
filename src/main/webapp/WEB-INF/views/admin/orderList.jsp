@@ -23,16 +23,7 @@
 	z-index: -1000;
 	overflow: hidden;
 }
-.delete_btn{
-    border: none;
-    color: white;
-    padding: 5px 15px;
-    cursor: pointer;
-    background-color: #f7564b;	
-}
-.delete_btn:hover{
-	background-color : #da190b;
-}
+
 </style>
 
 
@@ -50,9 +41,10 @@
 		<h1 class="Logo">
 			<a href="/"> SPACE SHIP</a>
 		</h1>
-		<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/moveMakeWeb3"
-			class="a1">사업분야</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
-			href="/moveMakeWeb5" class="a1">우주인채용</a>
+		<a href="/moveMakeWeb2" class="a1">역사</a>
+	<a href="/search" class="a1">우주선검색</a> 
+	<a href="/moveMakeWeb4" class="a1">ufo</a> 
+	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
 
 		<c:if test="${isAdmin == 1}">
 			<a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
@@ -154,7 +146,7 @@
 							<td class="th_column_4"><c:out value="${list.orderState}" /></td>
 							<td class="th_column_5">
 								<c:if test="${list.orderState == '배송준비' }">
-									<button class="delete_btn" data-orderid="${list.orderId}">취소</button>
+									<button class="delete_btn" data-orderid="${list.orderId}"><p class="deleteText">취소</p></button>
 								</c:if>
 							</td>
 						</tr>

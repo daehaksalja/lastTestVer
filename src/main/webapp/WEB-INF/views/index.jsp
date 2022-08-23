@@ -11,7 +11,66 @@
 </head>
 
 <body>
-	<%@include file="header.jsp"%>
+<div class="header">
+	<h1 class="Logo">
+		<a> SPACE SHIP</a>
+	</h1>
+	<a href="/moveMakeWeb2" class="a1">역사</a>
+	<a href="/search" class="a1">우주선검색</a> 
+	<a href="/moveMakeWeb4" class="a1">ufo</a> 
+	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
+				
+		<c:if test="${isAdmin == 1}">
+			<a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
+				class="frame-btn__outline frame-btn__outline--tall"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">admin</span>
+			</a>
+
+		</c:if>
+				
+			<c:if test="${not empty member.user_id}">
+				<a class="frame-btn" href="/logout" id="logoutBtn"> 
+				<span class="frame-btn__outline frame-btn__outline--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__outline frame-btn__outline--flat"></span>
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__solid"></span> <span class="frame-btn__text">로그아웃</span>
+				</a>	
+				
+				
+		
+  			                          
+								<a class="frame-btn" href="/orderList">
+				<span class="frame-btn__outline frame-btn__outline--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__outline frame-btn__outline--flat"></span>
+				<span class="frame-btn__line frame-btn__line--tall"></span> 
+				<span class="frame-btn__line frame-btn__line--flat"></span>
+				<span class="frame-btn__solid"></span> <span class="frame-btn__text">주문현황</span>
+				</a>	
+			</c:if>
+				
+			<c:if test="${empty member.user_id}">
+				<a class="frame-btn" href="moveLogin"> 
+					<span class="frame-btn__outline frame-btn__outline--tall"></span>
+					<span class="frame-btn__line frame-btn__line--tall"></span> 
+					<span class="frame-btn__line frame-btn__line--flat"></span>
+					<span class="frame-btn__outline frame-btn__outline--flat"></span>
+					<span class="frame-btn__line frame-btn__line--tall"></span> 
+					<span class="frame-btn__line frame-btn__line--flat"></span>
+					<span class="frame-btn__solid"></span> 
+					<span class="frame-btn__text">LOGIN</span>
+				</a>
+			</c:if>
+		</div>
 	
 	<video class="mainVideo"
 		src="../../resources/css/nebula_-_25168 (Original).mp4" muted autoplay

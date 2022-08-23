@@ -235,8 +235,8 @@ body{
 	    display: flex;
     width: 200px;
     font-family: Comfortaa;
-    color: #fff;
-    animation: neon3 1.5s ease-in-out infinite alternate;
+    color: #00ffff;
+ /*    animation: neon3 1.5s ease-in-out infinite alternate; */
     margin-left: 1162px;
     margin-top: 66px;
     font-size: 23px;
@@ -247,8 +247,8 @@ body{
 	display:flex;
 
     font-family: Comfortaa;
-    color: #fff;
-    animation: neon3 1.5s ease-in-out infinite alternate;
+  color: #00ffff;
+  /*   animation: neon3 1.5s ease-in-out infinite alternate; */
     margin-left: 1162px;
     margin-top: 14px;
     font-size: 23px;
@@ -287,8 +287,8 @@ body{
 .neon_effect .sale_price:first-child{
 	        font-family: Comfortaa;
     DISPLAY: flex;
-    color: #fff;
-    animation: neon3 1.5s ease-in-out infinite alternate;
+    color: #00ffff;
+/*     animation: neon3 1.5s ease-in-out infinite alternate; */
     margin-left: 1159px;
     margin-top: 57px;
         font-size: 26px;

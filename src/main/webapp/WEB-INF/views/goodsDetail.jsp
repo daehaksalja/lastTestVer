@@ -14,6 +14,7 @@
 <style type="text/css">
 /* 비디오 배경 */
 #videobcg {
+margin-top:-30px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -58,7 +59,7 @@ body {
 	<video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
 			muted="muted">
 
-		<source src="/resources/css/adobeVideo/cloudSmall.mp4"
+		<source src="../../resources/css/adobeVideo/pinkBlackHoleSmall.mp4"
 			type="video/mp4">
 
 	</video>
