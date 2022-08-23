@@ -38,6 +38,7 @@ public class SampleController {
     public void kakaoPaySuccess(@RequestParam("pg_token") String pg_token, Model model) {
 
         model.addAttribute("info", kakaopay.kakaoPayInfo(pg_token));
+        System.out.println("7777777777777777777777:"+ kakaopay.kakaoPayInfo(pg_token));
         
     }
     

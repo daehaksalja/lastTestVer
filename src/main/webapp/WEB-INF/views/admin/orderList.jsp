@@ -23,6 +23,16 @@
 	z-index: -1000;
 	overflow: hidden;
 }
+.delete_btn{
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #f7564b;	
+}
+.delete_btn:hover{
+	background-color : #da190b;
+}
 </style>
 
 
@@ -142,7 +152,11 @@
 							<td class="th_column_3"><fmt:formatDate value="${list.orderDate}"
 									pattern="yyyy-MM-dd" /></td>
 							<td class="th_column_4"><c:out value="${list.orderState}" /></td>
-							<td class="th_column_5"></td>
+							<td class="th_column_5">
+								<c:if test="${list.orderState == '배송준비' }">
+									<button class="delete_btn" data-orderid="${list.orderId}">취소</button>
+								</c:if>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -155,20 +169,7 @@
 
 		</div>
 
-		<!-- 검색 영역 -->
-		<div class="search_wrap">
-			<form id="searchForm" action="/orderList" method="get">
-				<div class="search_input">
-					<input type="text" class="searchInput" name="keyword"
-						placeholder="주문아이디를 입력해주세요"
-						value='<c:out value="${pageMaker.cri.keyword}"></c:out>'>
-					<input type="hidden" name="pageNum"
-						value='<c:out value="${pageMaker.cri.pageNum }"></c:out>'>
-					<input type="hidden" name="amount" value='${pageMaker.cri.amount}'>
-					<button class='btn search_btn'>검 색</button>
-				</div>
-			</form>
-		</div>
+		
 
 
 
@@ -210,7 +211,13 @@
 		<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
 		<input type="hidden" name="keyword" value="${pageMaker.cri.keyword}">
 	</form>
-
+	   <form id="deleteForm" action="/orderCancle" method="post">
+                    	<input type="hidden" name="orderId">
+						<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+						<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
+						<input type="hidden" name="keyword" value="${pageMaker.cri.keyword}">
+						<input type="hidden" name="memberId" value="${member.user_id}">
+                    </form>
 	<script>
 		let searchForm = $('#searchForm');
 		let moveForm = $('#moveForm');
@@ -242,6 +249,16 @@
 
 			moveForm.submit();
 
+		});
+		
+		$(".delete_btn").on("click", function(e){
+			
+			e.preventDefault();
+			
+			let id = $(this).data("orderid");
+			
+			$("#deleteForm").find("input[name='orderId']").val(id);
+			$("#deleteForm").submit();
 		});
 	</script>
 </body>

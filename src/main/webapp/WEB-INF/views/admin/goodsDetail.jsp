@@ -18,7 +18,6 @@
 	z-index: -1000;
 	overflow: hidden;
 }
-
 #result_card img {
 	max-width: 400px;
 	height: auto;
@@ -48,7 +47,7 @@ body {
 	background-color: black;
 }
 </style> 
-<%@include file="../header.jsp" %>
+
 
 <body>
 	<video id="videobcg" preload="auto" autoplay="true" loop="loop"
@@ -199,7 +198,6 @@ body {
 							/* 이미지 정보 호출 */
 							let shipId = '<c:out value="${goodsInfo.shipId}"/>';
 							let uploadReslut = $("#uploadReslut");
-
 							$
 									.getJSON(
 											"/getAttachList",
@@ -212,13 +210,11 @@ body {
 													str += "<div id='result_card'>";
 													str += "<img src='/resources/image/goodsNoImage.png'>";
 													str += "</div>";
-
 													uploadReslut.html(str);
 													return;
 												}
 												let str = "";
 												let obj = arr[0];
-
 												let fileCallPath = encodeURIComponent(obj.uploadPath
 														+ "/s_"
 														+ obj.uuid
@@ -229,12 +225,9 @@ body {
 												str += "<img src='/display?fileName="
 														+ fileCallPath + "'>";
 												str += "</div>";
-
 												uploadReslut.html(str);
-
 											});
 						});
-
 		/* 목록 이동 버튼 */
 		$("#cancelBtn").on("click", function(e) {
 			e.preventDefault();
