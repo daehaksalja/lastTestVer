@@ -21,36 +21,23 @@
 
 
 	<c:if test="${not empty sessionScope.user_id}">
-		<div class="neon_effect">
-			<div class="header">
+
+		<div class="header">
+			<div class="neon_effect">
 				<h1>
-					<a href="/" class="pGold"> SPACE SHIP </a>
+					<a href="/" class="Logo"> SPACE SHIP </a>
 				</h1>
 
+			</div>
 
 
-
-					<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/search" class="a1">우주선검색</a> 
-	<a href="/moveMakeWeb4" class="a1">ufo</a> 
-	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
+			<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/search"
+				class="a1">우주선검색</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
+				href="/moveMakeWeb5" class="a1">우주인채용</a>
 
 
-				<c:if test="${isAdmin == 1}">
-					<a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
-						class="frame-btn__outline frame-btn__outline--tall"> <span
-							class="frame-btn__line frame-btn__line--tall"></span> <span
-							class="frame-btn__line frame-btn__line--flat"></span>
-					</span> <span class="frame-btn__outline frame-btn__outline--flat">
-							<span class="frame-btn__line frame-btn__line--tall"></span> <span
-							class="frame-btn__line frame-btn__line--flat"></span>
-					</span> <span class="frame-btn__solid"></span> <span
-						class="frame-btn__text">admin</span>
-					</a>
-
-				</c:if>
-				<a class="frame-btn"
-					href="/memberRead?user_no=${sessionScope.user_no}"> <span
+			<c:if test="${isAdmin == 1}">
+				<a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
 					class="frame-btn__outline frame-btn__outline--tall"> <span
 						class="frame-btn__line frame-btn__line--tall"></span> <span
 						class="frame-btn__line frame-btn__line--flat"></span>
@@ -58,19 +45,30 @@
 						class="frame-btn__line frame-btn__line--tall"></span> <span
 						class="frame-btn__line frame-btn__line--flat"></span>
 				</span> <span class="frame-btn__solid"></span> <span
-					class="frame-btn__text">마이페이지</span>
-				</a> <a class="frame-btn" href="/logout" id="logoutBtn"> <span
-					class="frame-btn__outline frame-btn__outline--tall"> <span
-						class="frame-btn__line frame-btn__line--tall"></span> <span
-						class="frame-btn__line frame-btn__line--flat"></span>
-				</span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
-						class="frame-btn__line frame-btn__line--tall"></span> <span
-						class="frame-btn__line frame-btn__line--flat"></span>
-				</span> <span class="frame-btn__solid"></span> <span
-					class="frame-btn__text">로그아웃</span>
+					class="frame-btn__text">admin</span>
 				</a>
 
-			</div>
+			</c:if>
+			<a class="frame-btn"
+				href="/memberRead?user_no=${sessionScope.user_no}"> <span
+				class="frame-btn__outline frame-btn__outline--tall"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">마이페이지</span>
+			</a> <a class="frame-btn" href="/logout" id="logoutBtn"> <span
+				class="frame-btn__outline frame-btn__outline--tall"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
+					class="frame-btn__line frame-btn__line--tall"></span> <span
+					class="frame-btn__line frame-btn__line--flat"></span>
+			</span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">로그아웃</span>
+			</a>
+	</div>
+
 
 
 			<div class="mid">
@@ -97,9 +95,9 @@
 				</h3>
 			</div>
 
-			<video class="spinUfo" src="../../../resources/css/black_hole.mov"
+			<video class="spinUfo" src="../../../resources/css/adobeVideo/earthShipSmall.mp4"
 				muted autoplay loop></video>
-		</div>
+	
 
 	</c:if>
 
@@ -108,19 +106,20 @@
 
 
 	<c:if test="${empty sessionScope.user_id}">
-		<div class="neon_effect">
+	
 			<div class="header">
 
-				<h1>
-					<a href="/" class="pGold"> SPACE SHIP</a>
-				</h1>
+				<div class="neon_effect">
+					<h1>
+						<a href="/" class="Logo"> SPACE SHIP </a>
+					</h1>
+
+				</div>
 
 
-
-					<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/search" class="a1">우주선검색</a> 
-	<a href="/moveMakeWeb4" class="a1">ufo</a> 
-	<a href="/moveMakeWeb5" class="a1">우주인채용</a>  <a class="frame-btn"
+				<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/search"
+					class="a1">우주선검색</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
+					href="/moveMakeWeb5" class="a1">우주인채용</a> <a class="frame-btn"
 					href="moveLogin"> <span
 					class="frame-btn__outline frame-btn__outline--tall"> <span
 						class="frame-btn__line frame-btn__line--tall"></span> <span
@@ -132,7 +131,7 @@
 					class="frame-btn__text">LOGIN</span>
 				</a>
 			</div>
-		</div>
+
 
 		<div class="mid">
 
@@ -160,10 +159,14 @@
 				9월 25일 기사에 수록되어 있다.
 			</h3>
 
-			<video class="ufo1" src="../../../resources/css/Dj - 105420.mp4"
-				muted autoplay loop></video>
 
 		</div>
+
+		<video class="spinUfo" src="../../../resources/css/adobeVideo/earthShipSmall.mp4"
+		muted autoplay loop></video>
+
+
+
 	</c:if>
 
 	<script>

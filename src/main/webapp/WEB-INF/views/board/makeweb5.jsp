@@ -23,17 +23,18 @@
 	<c:if test="${not empty sessionScope.user_id}">
 
 		<div class="header">
-			<h1>
-				<a href="/" class="Logo"> SPACE SHIP </a>
-			</h1>
+
+			<div class="neon_effect">
+				<h1>
+					<a href="/" class="Logo"> SPACE SHIP </a>
+				</h1>
+
+			</div>
 
 
-
-
-				<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/search" class="a1">우주선검색</a> 
-	<a href="/moveMakeWeb4" class="a1">ufo</a> 
-	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
+			<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/search"
+				class="a1">우주선검색</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
+				href="/moveMakeWeb5" class="a1">우주인채용</a>
 
 
 			<c:if test="${isAdmin == 1}">
@@ -69,6 +70,17 @@
 			</a>
 
 		</div>
+		<div class="neon_effect">
+			<div class="mainText">오시는 길</div>
+		</div>
+		<div class="neon_effect">
+			<div class="subText">본사는 지구에 위치해 있으니 적당히 찾아오십시오.</div>
+		</div>
+
+
+
+
+
 	</c:if>
 
 
@@ -77,17 +89,19 @@
 
 	<c:if test="${empty sessionScope.user_id}">
 		<div class="header">
-			<h1>
-				<a href="/" class="Logo"> SPACE SHIP </a>
-			</h1>
+			<div class="neon_effect">
+				<h1>
+					<a href="/" class="Logo"> SPACE SHIP </a>
+				</h1>
+
+			</div>
 
 
 
-				<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/search" class="a1">우주선검색</a> 
-	<a href="/moveMakeWeb4" class="a1">ufo</a> 
-	<a href="/moveMakeWeb5" class="a1">우주인채용</a>  <a
-				class="frame-btn" href="moveLogin"> <span
+			<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/search"
+				class="a1">우주선검색</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
+				href="/moveMakeWeb5" class="a1">우주인채용</a> <a class="frame-btn"
+				href="moveLogin"> <span
 				class="frame-btn__outline frame-btn__outline--tall"> <span
 					class="frame-btn__line frame-btn__line--tall"></span> <span
 					class="frame-btn__line frame-btn__line--flat"></span>
@@ -97,6 +111,16 @@
 			</span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">LOGIN</span>
 			</a>
 		</div>
+
+
+		<div class="neon_effect">
+			<div class="mainText">오시는 길</div>
+		</div>
+		<div class="neon_effect">
+			<div class="subText">본사는 지구에 위치해 있으니 적당히 찾아오십시오.</div>
+		</div>
+
+
 	</c:if>
 
 </body>

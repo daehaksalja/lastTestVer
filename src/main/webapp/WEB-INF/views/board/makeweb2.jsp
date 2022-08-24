@@ -24,33 +24,34 @@
 	<c:if test="${not empty sessionScope.user_id}">
 
 		<div class="header">
+			<div class="neon_effect">
 
-			<h1>
-				<a href="/" class="Logo"> SPACE SHIP </a>
-			</h1>
+				<h1>
+					<a href="/" class="Logo"> SPACE SHIP </a>
+				</h1>
+
+			</div>
 
 
+			<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/search"
+				class="a1">우주선검색</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
+				href="/moveMakeWeb5" class="a1">우주인채용</a>
 
+			<c:if test="${isAdmin == 1}">
+				<a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
+					class="frame-btn__outline frame-btn__outline--tall"> <span
+						class="frame-btn__line frame-btn__line--tall"></span> <span
+						class="frame-btn__line frame-btn__line--flat"></span>
+				</span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
+						class="frame-btn__line frame-btn__line--tall"></span> <span
+						class="frame-btn__line frame-btn__line--flat"></span>
+				</span> <span class="frame-btn__solid"></span> <span
+					class="frame-btn__text">admin</span>
+				</a>
 
-				<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/search" class="a1">우주선검색</a> 
-	<a href="/moveMakeWeb4" class="a1">ufo</a> 
-	<a href="/moveMakeWeb5" class="a1">우주인채용</a> 
-				
-				<c:if test="${isAdmin == 1}">
-        <a class="frame-btn" href="/adminMenu" id="logoutBtn"> <span
-            class="frame-btn__outline frame-btn__outline--tall"> <span
-               class="frame-btn__line frame-btn__line--tall"></span> <span
-               class="frame-btn__line frame-btn__line--flat"></span>
-         </span> <span class="frame-btn__outline frame-btn__outline--flat"> <span
-               class="frame-btn__line frame-btn__line--tall"></span> <span
-               class="frame-btn__line frame-btn__line--flat"></span>
-         </span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">admin</span>
-         </a>
-         
-         </c:if>
-				<a class="frame-btn"
-				href="/memberRead?user_no=${sessionScope.user_no}" > <span
+			</c:if>
+			<a class="frame-btn"
+				href="/memberRead?user_no=${sessionScope.user_no}"> <span
 				class="frame-btn__outline frame-btn__outline--tall"> <span
 					class="frame-btn__line frame-btn__line--tall"></span> <span
 					class="frame-btn__line frame-btn__line--flat"></span>
@@ -58,9 +59,7 @@
 					class="frame-btn__line frame-btn__line--tall"></span> <span
 					class="frame-btn__line frame-btn__line--flat"></span>
 			</span> <span class="frame-btn__solid"></span> <span class="frame-btn__text">마이페이지</span>
-			</a> 
-			
-			<a class="frame-btn" href="/logout" id="logoutBtn"> <span
+			</a> <a class="frame-btn" href="/logout" id="logoutBtn"> <span
 				class="frame-btn__outline frame-btn__outline--tall"> <span
 					class="frame-btn__line frame-btn__line--tall"></span> <span
 					class="frame-btn__line frame-btn__line--flat"></span>
@@ -72,7 +71,7 @@
 
 		</div>
 		<br>
-		<h1 class="h1_1">"우주를 향한 인류의 위대한 도약"</h1>
+		<h1 class="h1_1">"우주를 향한 인류의 위대한 우주선 판매"</h1>
 
 		<video src="../../../resources/css/star_ship_king.mov" muted autoplay
 			loop class="star_ship"></video>
@@ -96,13 +95,11 @@
 		<h3>
 			준궤도 우주비행에서 우주선은 우주에 진입하여 궤도를 도는 일이 없이 행성(통상 지구)의 표면으로 돌아온다.<br>
 			<br> 궤도 우주비행에서는 우주선은 행성 주위로 원을 이루는 궤도에 들어선다. 유인 우주비행을 위한 우주선은
-			승무원 또는 승객들을 내부에 실어 나를 수 있다. <br>
-			<br>로봇의 우주 임무를 위한 우주선은 자율적으로 또는 원격 조종으로 운영된다. 행성에 접근하는 로봇 우주선은
-			우주 탐사선이라 부른다. <br>
-			<br>행성의 궤도에 남는 로봇 우주선은 '인공위성'이 된다. 행성간 여행을 위한 성간 우주선은 실제로 존재한다.
-			<br>
-			<br>우주선은 통신, 지구 관측, 기상, 내비게이션, 행성 탐사, 우주 여행 등 다양한 용도에 상용. 우주선과
-			우주 여행은 공상과학 소설에서 흔한 소재가 된다.
+			승무원 또는 승객들을 내부에 실어 나를 수 있다. <br> <br>로봇의 우주 임무를 위한 우주선은
+			자율적으로 또는 원격 조종으로 운영된다. 행성에 접근하는 로봇 우주선은 우주 탐사선이라 부른다. <br> <br>행성의
+			궤도에 남는 로봇 우주선은 '인공위성'이 된다. 행성간 여행을 위한 성간 우주선은 실제로 존재한다. <br> <br>우주선은
+			통신, 지구 관측, 기상, 내비게이션, 행성 탐사, 우주 여행 등 다양한 용도에 상용. 우주선과 우주 여행은 공상과학
+			소설에서 흔한 소재가 된다.
 		</h3>
 		<br>
 		<br>
@@ -118,16 +115,19 @@
 
 	<c:if test="${empty sessionScope.user_id}">
 		<div class="header">
-			<h1>
-				<a href="/" class="Logo"> SPACE SHIP </a>
-			</h1>
+			<div class="neon_effect">
+
+				<h1>
+					<a href="/" class="Logo"> SPACE SHIP </a>
+				</h1>
+
+			</div>
 
 
-	<a href="/moveMakeWeb2" class="a1">역사</a>
-	<a href="/search" class="a1">우주선검색</a> 
-	<a href="/moveMakeWeb4" class="a1">ufo</a> 
-	<a href="/moveMakeWeb5" class="a1">우주인채용</a>  <a
-				class="frame-btn" href="moveLogin"> <span
+			<a href="/moveMakeWeb2" class="a1">역사</a> <a href="/search"
+				class="a1">우주선검색</a> <a href="/moveMakeWeb4" class="a1">ufo</a> <a
+				href="/moveMakeWeb5" class="a1">우주인채용</a> <a class="frame-btn"
+				href="moveLogin"> <span
 				class="frame-btn__outline frame-btn__outline--tall"> <span
 					class="frame-btn__line frame-btn__line--tall"></span> <span
 					class="frame-btn__line frame-btn__line--flat"></span>
@@ -139,7 +139,7 @@
 		</div>
 
 		<br>
-		<h1 class="h1_1">"우주를 향한 인류의 위대한 도약"</h1>
+		<h1 class="h1_1">"우주를 향한 인류의 위대한 우주선 판매"</h1>
 
 		<video src="../../../resources/css/star_ship_king.mov" muted autoplay
 			loop class="star_ship"></video>
@@ -163,13 +163,11 @@
 		<h3>
 			준궤도 우주비행에서 우주선은 우주에 진입하여 궤도를 도는 일이 없이 행성(통상 지구)의 표면으로 돌아온다.<br>
 			<br> 궤도 우주비행에서는 우주선은 행성 주위로 원을 이루는 궤도에 들어선다. 유인 우주비행을 위한 우주선은
-			승무원 또는 승객들을 내부에 실어 나를 수 있다. <br>
-			<br>로봇의 우주 임무를 위한 우주선은 자율적으로 또는 원격 조종으로 운영된다. 행성에 접근하는 로봇 우주선은
-			우주 탐사선이라 부른다. <br>
-			<br>행성의 궤도에 남는 로봇 우주선은 '인공위성'이 된다. 행성간 여행을 위한 성간 우주선은 실제로 존재한다.
-			<br>
-			<br>우주선은 통신, 지구 관측, 기상, 내비게이션, 행성 탐사, 우주 여행 등 다양한 용도에 상용. 우주선과
-			우주 여행은 공상과학 소설에서 흔한 소재가 된다.
+			승무원 또는 승객들을 내부에 실어 나를 수 있다. <br> <br>로봇의 우주 임무를 위한 우주선은
+			자율적으로 또는 원격 조종으로 운영된다. 행성에 접근하는 로봇 우주선은 우주 탐사선이라 부른다. <br> <br>행성의
+			궤도에 남는 로봇 우주선은 '인공위성'이 된다. 행성간 여행을 위한 성간 우주선은 실제로 존재한다. <br> <br>우주선은
+			통신, 지구 관측, 기상, 내비게이션, 행성 탐사, 우주 여행 등 다양한 용도에 상용. 우주선과 우주 여행은 공상과학
+			소설에서 흔한 소재가 된다.
 		</h3>
 		<br>
 		<br>

@@ -18,9 +18,12 @@
    width: 100%;
    margin: 0; padding: 0;
 }
-.Logo{
+.neon_effect .Logo:first-child{
 	text-decoration:none;
-	color:white;
+  color: #fff;
+  font-weight: bold;
+  font-size:1em;
+  animation: neon3 1.5s ease-in-out infinite alternate;
 }
 h1{
 	margin-left:30px;
@@ -144,6 +147,7 @@ h1{
 }
 .h1_1{
    font-style: italic;
+   margin-top: 10px;
 }
 h3{
    color: white;
@@ -385,6 +389,7 @@ body{
 }
 .star_ship{
 	width:100%;
+	margin-top: 10px;
 }
 .mainVideo{
     margin-top: 10px;
