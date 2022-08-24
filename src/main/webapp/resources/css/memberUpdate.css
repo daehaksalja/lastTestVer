@@ -146,15 +146,15 @@
 }
 
 .input-ty1 {
-    font-family: 'Song Myung', serif;
-      display: inline-block;
-      width: 250px;
-      margin-top: 8px;
-      height: 26px;
-      border-radius: 10px;
-      border: 1px solid black;
-      padding: 8px;
-      box-sizing: border-box;
+  font-family: 'Song Myung', serif;
+    display: inline-block;
+    width: 250px;
+    margin-top: 4px;
+    height: 26px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 8px;
+    box-sizing: border-box;
     }
     
 .checkBox{
@@ -301,8 +301,8 @@ h1{
 .sujungBtn{
 	margin-top:40px;
 	margin-left:45%;
-	border-color: black;
-	background-color: black;
+	    background-color: transparent;
+    border-color: transparent;
 }
 
 
@@ -590,17 +590,16 @@ body {
 .neon_effect .userText1H2:first-child{
 	
 	text-align: center;
-	color: white;
+	color:#00ffff;
 	margin-right: 13%;
-	color: #fff;
-  animation: neon8 50s ease-in-out infinite alternate;
+/*   animation: neon8 50s ease-in-out infinite alternate; */
 }
 .neon_effect .userText2H2:first-child{
-	margin-top:-230px;
-	text-align: center;
-	color: white;
-	margin-Left: 13%;
-	animation: neon4 50s ease-in-out infinite alternate;
+	margin-top: -212px;
+    text-align: center;
+    color: white;
+    margin-Left: 13%;
+	/* animation: neon4 50s ease-in-out infinite alternate; */
 }
 
 .neon_effect .footer:first-child{

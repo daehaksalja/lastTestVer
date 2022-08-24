@@ -7,8 +7,49 @@
 <title>회원등록</title>
 </head>
 <link rel="stylesheet" href="../../../resources/css/memberRead1.css">
+<style type="text/css">
+
+/* 비디오 배경 */
+#videobcg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 1920px;
+	min-height: 1080px;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	overflow: hidden;
+}
+</style>
+
+<style>
+/* 깔끔하게 스크롤바싹없애는 */
+html, body, div, video {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 0px, 0px, 0px, 0px;
+	margin: 0px, 0px, 0px, 0px;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.container {
+	
+}
+</style>
 <body>
- 	
+ 	 <video id="videobcg" preload="auto" autoplay="true" loop="loop"
+   muted="muted">
+
+   <source src="../../resources/css/adobeVideo/goldEarthSmall.mp4" type="video/mp4">
+
+
+
+</video>
    <div class="header">
    
 			<h1 class="Logo"> <a href="/" class="spaceShip">SPACE SHIP</a></h1>

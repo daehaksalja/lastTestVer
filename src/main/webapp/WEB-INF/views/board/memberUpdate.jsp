@@ -22,6 +22,41 @@
 	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../../../resources/css/memberUpdate.css">
+
+<style type="text/css">
+
+/* 비디오 배경 */
+#videobcg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 1920px;
+	min-height: 1080px;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	overflow: hidden;
+}
+</style>
+
+<style>
+/* 깔끔하게 스크롤바싹없애는 */
+html, body, div, video {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 0px, 0px, 0px, 0px;
+	margin: 0px, 0px, 0px, 0px;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.container {
+	
+}
+</style>
 </head>
 <body>
 
@@ -40,6 +75,14 @@
    </form>
 	<script type="text/javascript" src="/resources/js/regist.js"></script> --%>
 
+  <video id="videobcg" preload="auto" autoplay="true" loop="loop"
+   muted="muted">
+
+   <source src="../../resources/css/adobeVideo/goldEarthSmall.mp4" type="video/mp4">
+
+
+
+</video>
 
 
  <div class="header">
