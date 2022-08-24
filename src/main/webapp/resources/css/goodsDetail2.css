@@ -371,13 +371,14 @@ body{
     	
 		}	
 		.image_wrap img {
-border-color:#00ffff;
-		border-radius:30px;
-		position:absolute;
-		 width: 780px;
-		    max-width: 100%;
-		    height: auto;
-		    display: block;
+    border-color: #00ffff;
+    border-radius: 30px;
+    position: absolute;
+    width: 780px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 766px;
 		}
 
 

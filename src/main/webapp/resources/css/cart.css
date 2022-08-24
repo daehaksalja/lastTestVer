@@ -5,6 +5,7 @@
 }
 a{
    text-decoration: none;
+   color: white;
 }
 /* 몸 */
 body{
@@ -24,7 +25,7 @@ body{
 }
 /* 전체선택 체크박스 텍스트*/
 .all_check_span{
-   color:#00ffff;
+   color:#fff;
 }
 
 
@@ -470,7 +471,7 @@ height: 361px;
 /* 네개대가리들 */
 .td_width_1{
     display: flex;
-    margin-left: 181px;
+    margin-left: 164px;
     margin-top: 10px;
 }
 .td_width_2{
@@ -495,27 +496,27 @@ height: 361px;
   color: #fff;
    font-family: Comfortaa;
  
- animation: neon6 1.5s ease-in-out infinite alternate; 
+/*  animation: neon6 1.5s ease-in-out infinite alternate;  */
 }
 /* 상품가격 */
 .neon_effect th:nth-child(2){
   color: #fff;
   font-family: Lobster;
-   animation: neon8 1.5s ease-in-out infinite alternate; 
+/*    animation: neon8 1.5s ease-in-out infinite alternate;  */
 
 }
 /* 상품수량 */
 .neon_effect th:nth-child(3){
   color: #fff;
   font-family: Abril Fatface;
- animation: neon7 1.5s ease-in-out infinite alternate; 
+/*  animation: neon7 1.5s ease-in-out infinite alternate;  */
 }
 /* 상품삭제 */
 .neon_effect th:nth-child(4){
   color: #fff;
   font-family: Comfortaa;
   font-weight: 700;
- animation: neon3 1.5s ease-in-out infinite alternate; 
+/*  animation: neon3 1.5s ease-in-out infinite alternate;  */
 }
 
 

@@ -48,7 +48,7 @@ body {
 <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
 		muted="muted">
 
-		<source src="../../resources/css/shipControllPanelSmall.mp4"
+		<source src="../../resources/css/adobeVideo/veryBigVideo.mp4"
 			type="video/mp4">
 
 	</video>

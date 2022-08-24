@@ -116,7 +116,8 @@
    margin-top: :10px;
 }
 
-.image_wrap img {
+.image_wrap img {   
+ max-height: 98px;
    max-width: 100%;
    height: auto;
    border-radius: 10%
@@ -128,7 +129,7 @@
       <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop"
       muted="muted">
 
-      <source src="../../resources/css/adobeVideo/blackHoleSmall.mp4"
+      <source src="../../resources/css/adobeVideo/nebula_-_25168 (Original).mp4"
          type="video/mp4">
 
    </video> 

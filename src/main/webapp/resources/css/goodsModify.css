@@ -10,15 +10,17 @@ body{
 
 
 #result_card img{
-	position: absolute;
-      max-width: 300px;
-       height: auto;
-       display: flex;
-       padding: 5px;
-       margin-top: -210px; 
-       border-radius: 20px;
-       margin-left: 30px;
-/*     transform: rotate(349.5deg); */
+	    position: absolute;
+    max-width: 300px;
+     max-height: 500px;
+    height: auto;
+    display: flex;
+    padding: 5px;
+    margin-top: -335px;
+    border-radius: 20px;
+    margin-left: 30px;   
+    
+    /* transform: rotate(349.5deg);*/
    }
 .container{
 	margin-left:-13.8%;
@@ -30,17 +32,17 @@ width: 100px;
 
 
 .imgDeleteBtn {
-	position: absolute;
-	background-color: red;
-	color: wheat;
-	margin-top: -220px;
-	margin-left: 23px;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	text-align: center;
-	border: none;
-	cursor: pointer;
+	    position: absolute;
+    background-color: red;
+    color: wheat;
+    margin-top: -343px;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
 .btn_section{
@@ -216,7 +218,7 @@ a{
 /* 이미지 버튼 위치 조절 */
 .imageBtn {
 		display:flex;
-	margin-left:120px;
+       margin-left: -142px;
 	margin-top:170px;
 	padding-top:0px;
 	font-family:sans-serif;

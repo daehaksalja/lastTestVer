@@ -34,7 +34,7 @@ body{
     font-family: 'Song Myung', serif;
     font-weight: bold;
     font-size: 24px;
-    animation: neon6 1.5s ease-in-out infinite alternate;
+/*     animation: neon6 1.5s ease-in-out infinite alternate; */
     margin-top: 41px;
     margin-left: 871px;
 }.neon_effect .Text2:first-child{
@@ -43,7 +43,7 @@ body{
     font-family: 'Song Myung', serif;
     font-weight: bold;
     font-size: 24px;
-    animation: neon8 1.5s ease-in-out infinite alternate;
+/*     animation: neon8 1.5s ease-in-out infinite alternate; */
     margin-top: 48px;
     margin-left: 870px;
 }.neon_effect .Text3:first-child{
@@ -52,7 +52,7 @@ body{
     font-family: 'Song Myung', serif;
     font-weight: bold;
     font-size: 24px;
-    animation: neon2 1.5s ease-in-out infinite alternate;
+/*     animation: neon2 1.5s ease-in-out infinite alternate; */
     margin-top: 48px;
     margin-left: 844px;
 }
@@ -131,7 +131,7 @@ color:#00ffff;
     font-family: 'Song Myung', serif;
     font-weight: bold;
     font-size: 24px;
-    animation: neon6 1.5s ease-in-out infinite alternate;
+/*     animation: neon6 1.5s ease-in-out infinite alternate; */
     margin-top: 41px;
     margin-left: 738px;
 }.neon_effect .Text22:first-child{
@@ -140,7 +140,7 @@ color:#00ffff;
     font-family: 'Song Myung', serif;
     font-weight: bold;
     font-size: 24px;
-    animation: neon8 1.5s ease-in-out infinite alternate;
+ /*    animation: neon8 1.5s ease-in-out infinite alternate; */
     margin-top: 48px;
     margin-left: 805px;
 }

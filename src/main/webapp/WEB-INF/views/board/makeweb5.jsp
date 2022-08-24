@@ -74,7 +74,7 @@
 			<div class="mainText">오시는 길</div>
 		</div>
 		<div class="neon_effect">
-			<div class="subText">본사는 지구에 위치해 있으니 적당히 찾아오십시오.</div>
+			<div class="subText">본사는 지구에 위치해 있읍니다.</div>
 		</div>
 
 
@@ -117,7 +117,7 @@
 			<div class="mainText">오시는 길</div>
 		</div>
 		<div class="neon_effect">
-			<div class="subText">본사는 지구에 위치해 있으니 적당히 찾아오십시오.</div>
+			<div class="subText">본사는 지구에 위치해 있읍니다.</div>
 		</div>
 
 

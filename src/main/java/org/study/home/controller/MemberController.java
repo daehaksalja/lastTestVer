@@ -136,7 +136,7 @@ public class MemberController {
 		System.out.println("user_id 값 확인" + user_id);
 		memberService.memberDelete(user_id);
 
-		return "redirect:/adminMember";
+		return "redirect:/adminMenu/adminMember";
 	}
 
 	@GetMapping("/memberRead")

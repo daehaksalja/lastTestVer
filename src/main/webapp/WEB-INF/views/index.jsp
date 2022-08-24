@@ -5,7 +5,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<style>
+#videobcg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 1920px;
+	min-height: 1080px;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	overflow: hidden;
+}</style>
 <title>Insert title here</title>
 <link rel="stylesheet" href="/resources/css/make.css">
 </head>
@@ -71,10 +82,18 @@
 			</a>
 		</c:if>
 	</div>
+	
+	
+	 <video id="videobcg" preload="auto" autoplay="true" loop="loop"
+		muted="muted">
 
-	<video class="mainVideo"
-		src="../../resources/css/adobeVideo/sunRisingSmall.mp4" muted autoplay
-		loop></video>
+		<source src="../../../resources/css/adobeVideo/veryBigVideo.mp4" type="video/mp4">
+
+	</video> 
+
+	<!-- <video class="mainVideo"
+		src="../../resources/css/adobeVideo/veryBigVideo.mp4" muted autoplay
+		loop></video> -->
 
 	<h1 class="stupid">"마치 우주같이 위대한 나를 위하여 그대들이 해줄것이 있소"</h1>
 

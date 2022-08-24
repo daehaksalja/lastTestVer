@@ -4,14 +4,14 @@
 	
 }
 
-#result_card img{
-      max-width: 300px;
-       height: auto;
-       display: flex;
-       padding: 5px;
-       margin-top: 110px; 
-       border-radius: 20px;
-       margin-left: -70%;
+#result_card img{   max-height: 500px;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    padding: 5px;
+    margin-top: 3px;
+    border-radius: 20px;
+    margin-left: -85%;
    }
 .container{
 	margin-left:-13.8%;
