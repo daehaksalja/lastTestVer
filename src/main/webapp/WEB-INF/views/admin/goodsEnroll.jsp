@@ -194,7 +194,7 @@ body {
 	<button id="changeBtn" class="changeBtn">&nbsp;</button>
 
 <body>
-	<script
+	<!-- <script
 		src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
 
 	<script
@@ -220,8 +220,8 @@ body {
 	<script
 		src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/EasePack3.min.js'></script>
 	<script
-		src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Flip.min.js'></script>
-	<script id="rendered-js">
+		src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Flip.min.js'></script>-->
+	<script> 
 	
 	/* 취소 버튼 */
 	
@@ -401,9 +401,9 @@ function deleteFile(){
 	});
 }
 </script>
-
+<!-- 
 	<script
-		src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+		src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script> -->
 </body>
 
 </html>

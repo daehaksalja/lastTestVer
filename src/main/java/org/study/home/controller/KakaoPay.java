@@ -67,9 +67,9 @@ public class KakaoPay {
 		params.add("quantity",  req.getParameter("quantity").toString());
 		params.add("total_amount", req.getParameter("total_amount").toString());
 		params.add("tax_free_amount", req.getParameter("tax_free_amount").toString());
-		params.add("approval_url", "http://localhost:8080/kakaoPaySuccess");
-		params.add("cancel_url", "http://localhost:8080/kakaoPayCancel");
-		params.add("fail_url", "http://localhost:8080/kakaoPaySuccessFail");
+		params.add("approval_url", "http://192.168.10.67:8080/kakaoPaySuccess");
+		params.add("cancel_url", "http://192.168.10.67:8080/kakaoPayCancel");
+		params.add("fail_url", "http://192.168.10.67:8080/kakaoPaySuccessFail");
 		
 		
 		

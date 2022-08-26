@@ -73,15 +73,14 @@ body {
 	<div class="neon_effect">
 		<div class="Text3">주문번호 : ${orderId}</div>
 	</div>
+	<form method="post" action="/kakaoPay">
 	<c:forEach items="${orderItems}" var="ol">
 		<tr>
 			<td>
 				<div class="image_wrap">
 
-					<form method="post" action="/kakaoPay">
-						<button class="order_btn">
-							<p class="btnText">카카오페이</p>
-						</button>
+					
+						
 						<input type=hidden class="total_amount" name="total_amount"
 							value="${totalPrice}"> <input type=hidden
 							class="tax_free_amount" name="tax_free_amount"
@@ -92,12 +91,16 @@ body {
 							value="${memberId}"> <input type=hidden class="item_name"
 							name="item_name" value="주문품"> <input type=hidden
 							class="quantity" name="quantity" value="${orderItemCount}">
-					</form>
+				
 
 					<c:out value=""></c:out>
 				</div>
 			</td>
 		</tr>
 	</c:forEach>
+	<button class="order_btn">
+							<p class="btnText">카카오페이</p>
+						</button>
+		</form>
 </body>
 </html>
